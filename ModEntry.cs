@@ -46,7 +46,8 @@ namespace MapTutorial
 
                 switch(ftype)
                 {
-                    case "dphile.Farm.CoolCusto":
+                    //replace the <custom farm id> with wour farm's id (from custom farmtypes)
+                    case "<custom farm id>":
                         //Create a variable that will store the location of the affected map
                         //Must be a valid game location
                         //Replace <location> with any valid location
