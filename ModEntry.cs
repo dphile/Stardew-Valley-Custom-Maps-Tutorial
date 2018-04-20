@@ -50,27 +50,28 @@ namespace MapTutorial
                         //Create a variable that will store the location of the affected map
                         //Must be a valid game location
                         //Replace <location> with any valid location
-                        GameLocation bStop = Game1.getLocationFromName("BusStop");
+                        GameLocation bStop = Game1.getLocationFromName("<location>");
 
                         //Remove an existing warp
                         //Replace <x> and <y> with the appropriate coordinates
-                        bStop.warps.RemoveAll(a => a.X == 0 && a.Y == 0);
+                        bStop.warps.RemoveAll(a => a.X == <x> && a.Y == <y>);
 
                         //Add a new warp
                         //Replace the <x>'s and <y>'s - the coordinates before the <location> 
                         //define where the warp is and the coordinates after the <location>
                         //define where the target is on the given <location>
-                        bStop.warps.Add(new Warp(0, 0, "Farm", 0, 0, false));
+                        bStop.warps.Add(new Warp(<x>, <y>, "<location>", <x>, <y>, false));
 
                         //Create a new location
                         //I suggest leaving your map in its tbin format
                         //I also suggest keeping maps in the folder where the mod is
                         //This adds the map to a variable called map
-                        Map map = this.Helper.Content.Load <Map>("map.tbin", ContentSource.ModFolder);
+                        //replace <map.tbin> with your map file name
+                        Map map = this.Helper.Content.Load <Map>("<map.tbin>", ContentSource.ModFolder);
 
                         //This add makes a location we can add
                         //Make a name for the location and don't put a space in it where <name> is
-                        GameLocation extraLoc = new GameLocation(map, "Extra");
+                        GameLocation extraLoc = new GameLocation(map, "<name>");
                         //This actually adds the location passed into it
                         Game1.locations.Add(extraLoc);
 
