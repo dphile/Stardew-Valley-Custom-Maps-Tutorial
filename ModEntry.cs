@@ -71,7 +71,7 @@ namespace MapTutorial
 
                         //This add makes a location we can add
                         //Make a name for the location and don't put a space in it where <name> is
-                        GameLocation extraLoc = new GameLocation(map, "<name>");
+                        GameLocation extraLoc = new GameLocation(map, "<name>"){ IsOutdoors = true, IsFarm = false };
                         //This actually adds the location passed into it
                         Game1.locations.Add(extraLoc);
 
